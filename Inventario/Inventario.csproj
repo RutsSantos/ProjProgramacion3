@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17B99620-396A-4F4F-BD1F-B86047F35FC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventario</RootNamespace>
+    <AssemblyName>Inventario</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\..\..\..\..\Downloads\Microsoft.ReportViewer.Common\Microsoft.ReportViewer.Common.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\Microsoft.ReportViewer.WinForms (1)\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Downloads\Microsoft.VisualBasic.PowerPacks.Vs\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultas\FormConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsulta.Designer.cs">
+      <DependentUpon>FormConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaProducto.Designer.cs">
+      <DependentUpon>FormConsultaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaDeUnidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaDeUnidad.Designer.cs">
+      <DependentUpon>FormConsultaDeUnidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetFactura.cs">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaFactura.Designer.cs">
+      <DependentUpon>FormConsultaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles.cs" />
+    <Compile Include="DataSetFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetDepartamento.cs">
+      <DependentUpon>DataSetDepartamento.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\DataSetDepartamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDepartamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetProducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetSuplidor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSuplidor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSetUnidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUnidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExecutionDB.cs" />
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaCliente.Designer.cs">
+      <DependentUpon>FormConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaDepartamento.Designer.cs">
+      <DependentUpon>FormConsultaDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaSuplidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FormConsultaSuplidor.Designer.cs">
+      <DependentUpon>FormConsultaSuplidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FormCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FormCrud.Designer.cs">
+      <DependentUpon>FormCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteFactura.Designer.cs">
+      <DependentUpon>FormReporteFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteFactura.Designer.cs">
+      <DependentUpon>FormReporteFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteDepartamento.Designer.cs">
+      <DependentUpon>FormReporteDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeDepartamento.Designer.cs">
+      <DependentUpon>FormMantenimientoDeDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeCliente.Designer.cs">
+      <DependentUpon>FormMantenimientoDeCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeProducto.Designer.cs">
+      <DependentUpon>FormMantenimientoDeProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeSuplidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoDeSuplidor.Designer.cs">
+      <DependentUpon>FormMantenimientoDeSuplidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FormMatrizOp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FormMatrizOp.Designer.cs">
+      <DependentUpon>FormMatrizOp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FormNumeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FormNumeros.Designer.cs">
+      <DependentUpon>FormNumeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FormPrimos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FormPrimos.Designer.cs">
+      <DependentUpon>FormPrimos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicios\FormMatrices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicios\FormMatrices.Designer.cs">
+      <DependentUpon>FormMatrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimiento.Designer.cs">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoUnidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\FormMantenimientoUnidades.Designer.cs">
+      <DependentUpon>FormMantenimientoUnidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\FormProcesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\FormProcesos.Designer.cs">
+      <DependentUpon>FormProcesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\FormProcesosVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\FormProcesosVentas.Designer.cs">
+      <DependentUpon>FormProcesosVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\FormReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporte.Designer.cs">
+      <DependentUpon>FormReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteCliente.Designer.cs">
+      <DependentUpon>FormReporteCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteProducto.Designer.cs">
+      <DependentUpon>FormReporteProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteSuplidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteSuplidor.Designer.cs">
+      <DependentUpon>FormReporteSuplidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteUnidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteUnidad.Designer.cs">
+      <DependentUpon>FormReporteUnidad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Consultas\FormConsulta.resx">
+      <DependentUpon>FormConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FormConsultaProducto.resx">
+      <DependentUpon>FormConsultaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FormConsultaDeUnidad.resx">
+      <DependentUpon>FormConsultaDeUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FormConsultaFactura.resx">
+      <DependentUpon>FormConsultaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FormConsultaCliente.resx">
+      <DependentUpon>FormConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FormConsultaDepartamento.resx">
+      <DependentUpon>FormConsultaDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FormConsultaSuplidor.resx">
+      <DependentUpon>FormConsultaSuplidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FormCrud.resx">
+      <DependentUpon>FormCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteFactura.resx">
+      <DependentUpon>FormReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteFactura.resx">
+      <DependentUpon>FormReporteFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteDepartamento.resx">
+      <DependentUpon>FormReporteDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FormMantenimientoDeDepartamento.resx">
+      <DependentUpon>FormMantenimientoDeDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FormMantenimientoDeCliente.resx">
+      <DependentUpon>FormMantenimientoDeCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FormMantenimientoDeProducto.resx">
+      <DependentUpon>FormMantenimientoDeProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FormMantenimientoDeSuplidor.resx">
+      <DependentUpon>FormMantenimientoDeSuplidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FormMatrizOp.resx">
+      <DependentUpon>FormMatrizOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FormNumeros.resx">
+      <DependentUpon>FormNumeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FormPrimos.resx">
+      <DependentUpon>FormPrimos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicios\FormMatrices.resx">
+      <DependentUpon>FormMatrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FormMantenimiento.resx">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\FormMantenimientoUnidades.resx">
+      <DependentUpon>FormMantenimientoUnidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\FormProcesos.resx">
+      <DependentUpon>FormProcesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\FormProcesosVentas.resx">
+      <DependentUpon>FormProcesosVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReportFactura.rdlc" />
+    <EmbeddedResource Include="Reports\ReportFactura.rdlc" />
+    <EmbeddedResource Include="Reports\ReportDepartamento.rdlc" />
+    <EmbeddedResource Include="Reportes\FormReporteProducto.resx">
+      <DependentUpon>FormReporteProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteSuplidor.resx">
+      <DependentUpon>FormReporteSuplidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteUnidad.resx">
+      <DependentUpon>FormReporteUnidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportProducto.rdlc" />
+    <EmbeddedResource Include="Reports\ReportCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\FormReporte.resx">
+      <DependentUpon>FormReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteCliente.resx">
+      <DependentUpon>FormReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSuplidor.rdlc" />
+    <EmbeddedResource Include="Reports\ReportUnidad.rdlc" />
+    <None Include="app.config" />
+    <None Include="DataSetFactura.xsc">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetFactura.xss">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetDepartamento.xsc">
+      <DependentUpon>DataSetDepartamento.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetDepartamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDepartamento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSetDepartamento.xss">
+      <DependentUpon>DataSetDepartamento.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetFactura.xsc">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSetFactura.xss">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetProducto.xsc">
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetProducto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProducto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSetProducto.xss">
+      <DependentUpon>DataSetProducto.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetSuplidor.xsc">
+      <DependentUpon>DataSetSuplidor.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetSuplidor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSuplidor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSetSuplidor.xss">
+      <DependentUpon>DataSetSuplidor.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetCliente.xsc">
+      <DependentUpon>DataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSetCliente.xss">
+      <DependentUpon>DataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetUnidad.xsc">
+      <DependentUpon>DataSetUnidad.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSetUnidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUnidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSetUnidad.xss">
+      <DependentUpon>DataSetUnidad.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{1BC35834-D508-4DA0-A5E5-8848389798E9}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
